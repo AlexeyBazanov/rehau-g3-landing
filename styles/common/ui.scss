@@ -1,0 +1,153 @@
+.button {
+    border: 2px solid $color-brown;
+    background: none;
+    border-radius: 0;
+    min-width: 210px;
+
+    &:hover {
+        .button__link {
+            color: $color-brown;
+        }
+    }
+}
+
+.button--arrow-down {
+    .button__link {
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 5px;
+            left: 5px;
+            background: url('/images/arrow_brown.png') no-repeat center;  
+            background-size: contain;
+        }
+    }
+
+    &:hover {
+        .button__link {
+            &::after {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.button__link {
+    @include font-normal;
+    color: white;
+}
+
+.link {
+    color: $color-white;
+    transition: color 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-brown !important;
+        text-shadow: 2px 2px 4px rgba($color: $color-black, $alpha: 1);
+    }
+}
+
+.anchor {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+
+    @include until($desktop) {
+        height: 100px;
+    }
+}
+
+.anchor__arrow {
+    display: block;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+    background: url('/images/arrow.png') no-repeat center;
+    background-size: contain;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+
+// ---- >> Формы ---- >>
+.input, .textarea {
+    border-radius: 0;
+    border: none;
+    background: $color-aqua-blue;
+    color: $color-white;
+    @include font-helvetica-roman;
+
+    &::placeholder {
+        color: $color-white;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px $color-brown;
+    }
+
+    &.input--white {
+        background: $color-white;
+        color: $color-black; 
+
+        &::placeholder {
+            color: $color-black;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px $color-aqua-blue;
+        }
+    }
+}
+
+.checkbox {
+    color: $color-white;
+    @include font-normal;
+    font-weight: 200;
+
+    &:hover {
+        color: rgba(255, 255, 255, 0.829);
+    }
+}
+
+input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 4px;
+}
+
+.label {
+    color: $color-white;;
+    @include font-normal;
+    font-weight: 200;
+}
+
+.form-required {
+    color: $color-red;
+    font-weight: 400;
+    padding-right: 5px;
+}
+
+.field.is-grouped {
+    @include mobile {
+        flex-direction: column;
+
+        .control {
+            margin-right: 0 !important;
+            margin-bottom: 6px !important;
+
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+// << ---- Формы ---- <<

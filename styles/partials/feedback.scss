@@ -1,0 +1,40 @@
+.feedback {
+    .container--blue {
+        @include from($widescreen) {
+            padding: 30px 90px;
+        }
+    }
+}
+
+.feedback__contact {
+    color: $color-white;
+    @include font-bigger;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        position: relative;
+        top: 12px;
+        margin-right: 10px;
+    }
+}
+
+.feedback__contact--phone {
+    &::before {
+        background: url("/images/icon-phone.png") no-repeat center;
+        background-size: contain;
+    }
+}
+
+.feedback__contact--email {
+    &::before {
+        background: url("/images/icon-mail.png") no-repeat center;
+        background-size: contain;
+    }
+
+    @include until($tablet) {
+        margin-bottom: 20px;
+    }
+}

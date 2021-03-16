@@ -1,0 +1,48 @@
+.passport-check__columns {
+    min-height: 280px;
+
+    @include until($tablet) {
+        min-height: 195px;
+    }
+}
+
+.passport-check__description {
+    padding: 0 30px;
+    color: $color-white;
+    @include font-normal;
+
+    @include from($desktop) {
+        padding: 0 120px;
+    }
+
+    @include until($tablet) {
+        padding: 0;
+    }
+
+}
+
+.passport-check__form {
+    margin-bottom: 20px;
+
+    .input {
+        max-width: 260px;
+    }
+
+    @media only screen and (min-width: 658px) and (max-width: 768px)  {
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+}
+
+.passport-check__hint {
+    @media only screen and (min-width: 658px) and (max-width: 768px)  {
+        width: 50%;
+        text-align: center;
+        float: left;
+
+        .button {
+            width: 260px;
+        }
+    }
+}

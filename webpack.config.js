@@ -1,0 +1,89 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin, } = require("clean-webpack-plugin");
+
+const config = {
+    mode: "development",
+    entry: {
+        index: "./scripts/index.js",
+    },
+    output: {
+        filename: "[name].[fullhash].js",
+        path: path.resolve(__dirname, "dist"),
+    },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "/html/index.html.ejs"),
+            inject: true,
+        }),
+    ],
+    devtool: "eval-cheap-module-source-map",
+    devServer: {
+        contentBase: "./dist",
+        overlay: true,
+        open: true,
+        compress: true,
+    },
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                loader: "html-loader",
+            },
+            {
+                test: /\.js$/,
+                loader: "babel-loader",
+                exclude: "/node_modules/",
+            },
+            {
+                test: /\.ejs$/,
+                loader: "ejs-loader",
+                options: {
+                    variable: "data",
+                    interpolate : "\\{\\{(.+?)\\}\\}",
+                    evaluate : "\\[\\[(.+?)\\]\\]",
+                },
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Support old browsers
+                    "postcss-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: "file-loader",
+                options: {
+                    name() {
+                        if (process.env.NODE_ENV === "development") {
+                            return "[path][name].[ext]";
+                        }
+                        return "[contenthash].[ext]";
+                    },
+                },
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "fonts/",
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+};
+
+module.exports = config;

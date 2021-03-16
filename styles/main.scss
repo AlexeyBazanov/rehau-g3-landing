@@ -1,0 +1,40 @@
+// Библиотеки
+@import '~modern-css-reset/dist/reset.min.css';
+@import '~bulma/css/bulma.css';
+@import '~bulma/sass/utilities/mixins.sass';
+@import "~animate.css/source/animate.css";
+
+// Шрифты, переменные, примеси
+@import './common/fonts.scss';
+@import './common/variables.scss';
+@import './common/mixins.scss';
+
+// UI
+@import './common/ui.scss';
+
+// Логотипы
+@import './common/logotips.scss';
+
+// Основная тема
+@import './partials/template.scss';
+
+// Шапка сайта
+@import './partials/header.scss';
+
+// Заголовок сайта
+@import './partials/headline.scss';
+
+// Основные преимущества
+@import './partials/benefits.scss';
+
+// Проверка паспорта окна
+@import './partials/passport_check.scss';
+
+// Карта дилеров
+@import './partials/dealers_map.scss';
+
+// Обратная связь
+@import './partials/feedback.scss';
+
+// Подвал сайта
+@import './partials/footer.scss';

@@ -1,0 +1,51 @@
+body {
+    background: $color-blue;
+    background: url('/images/template_background.jpg') no-repeat center;
+    background-position: center center;
+    background-size: cover;
+    @include font-helvetica-light();
+}
+
+.container {
+    @include until($desktop) {
+        padding: 0 $mobile-offset;
+    }
+}
+
+.container--blue {
+    background: rgb(19,52,80);
+    background: linear-gradient(25deg, #13202924 0%, #13334e6e 100%);
+    padding: 30px;
+}
+
+.title {
+    color: $color-brown;
+    @include font-larger;
+    @include font-helvetica-roman;
+    text-align: center;
+    font-weight: normal;
+}
+
+.title--main {
+    margin: 25px 0;
+}
+
+.sub-title {
+    margin-bottom: 5px;
+    
+    color: $color-white;
+    @include font-bigger;
+}
+
+.text {
+    color: $color-white;
+    @include font-normal;
+}
+
+.anchor--benefits {
+    margin-top: 80px;
+    
+    @include until($desktop) {
+        margin-top: 40px;
+    }
+}

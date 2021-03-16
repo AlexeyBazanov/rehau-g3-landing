@@ -1,0 +1,73 @@
+@mixin font-helvetica-light {
+    font-family: 'Helvetica Neue Cyr Light';
+}
+
+@mixin font-helvetica-roman {
+    font-family: 'Helvetica Neue Cyr Roman';
+}
+
+@mixin font-condensed-light {
+    font-family: 'DIN Pro Condensed Light';
+}
+
+@mixin font-largest {
+    font-size: 145px;
+    line-height: 140px;
+
+    @include until($widescreen) {
+        font-size: 125px;
+        line-height: 120px;
+    }
+
+    @include until($desktop) {
+        font-size: 65px;
+        line-height: 60px;
+    }
+}
+
+@mixin font-extra-large {
+    font-size: 52px;
+    line-height: 50px;
+
+    @include until($widescreen) {
+        font-size: 42px;
+        line-height: 40px;
+    }
+
+    @include until($desktop) {
+        font-size: 32px;
+        line-height: 30px;
+    }
+}
+
+@mixin font-larger {
+    font-size: 40px;
+
+    @include until($desktop) {
+        font-size: 34px;
+    }
+}
+
+@mixin font-large {
+    font-size: 24px;
+
+    @include until($desktop) {
+        font-size: 22px;
+    }
+}
+
+@mixin font-bigger {
+    font-size: 22px;
+
+    @include until($desktop) {
+        font-size: 20px;
+    }
+}
+
+@mixin font-normal {
+    font-size: 18px;
+
+    @include until($desktop) {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,119 @@
+.benefits {
+    @include from($widescreen) {
+        padding: 0 100px;
+    }
+}
+
+.benefits__main-title {
+    @include from($tablet) {
+        margin-bottom: 50px !important;
+    }
+}
+
+.benefits__item {
+    @include from($tablet) {
+        display: flex;
+    }
+}
+
+.benefits__info {
+    @include from($tablet) {
+        width: 50%;
+        float: left;
+    }
+}
+
+.benefits__info--first, .benefits__info--last {
+    @include from($tablet) {
+        padding-right: 50px;
+    }
+}
+
+.benefits__info--second {
+    @include from($tablet) {
+        padding-left: 50px;
+        border-left: 3px solid $color-grey;
+    }
+}
+
+.benefits__number {
+    @include font-largest;
+    @include font-condensed-light;
+    color: $color-brown;
+}
+
+.benefits__title {
+    @include font-large;
+    @include font-helvetica-roman;
+    color: $color-white;
+}
+
+.benefits__text {
+    @include font-normal;
+    @include font-helvetica-roman;
+    color: $color-white;
+}
+
+.benefits__button {
+    margin-top: 20px;
+}
+
+.benefits__banner_1 {
+    background: url('/images/benefits_1.jpg');
+    @include from($tablet) {
+        border-left: 3px solid $color-grey;
+    }
+}
+
+.benefits__banner_2 {
+    background: url('/images/benefits_2.jpg');
+}
+
+.benefits__banner_3 {
+    background: url('/images/benefits_3.jpg');
+    @include from($tablet) {
+        border-left: 3px solid $color-grey;
+    }
+}
+
+.benefits__banner {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    @include desktop-only {
+        background-position: inherit;
+    }
+
+    @include from($tablet) {
+        width: 50%;
+        float: left;
+        height: auto;
+    } 
+
+    @include until($tablet) {
+        margin-top: 20px;
+    }
+}
+
+.benefits__devider {
+    display: flex;
+    width: 100%;
+    height: 50px;
+
+    @include from($tablet) {
+        height: 100px;
+    }
+}
+
+.benefits__devider_left, .benefits__devider_right {
+    width: 50%;
+    float: left;
+}
+
+.benefits__devider_right {
+    @include from($tablet) {
+        border-left: 3px solid $color-grey;
+    }
+}

@@ -1,0 +1,28 @@
+// Шрифты
+@font-face {
+    font-family: 'Helvetica Neue Cyr Light';
+    src: url('../fonts/HelveticaNeueCyr-Light.eot');
+    src: url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Cyr Roman';
+    src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+    src: url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro Condensed Light';
+    src: url('../fonts/din_pro_condensed_light.eot');
+    src: url('../fonts/din_pro_condensed_light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/din_pro_condensed_light.woff') format('woff'),
+    url('../fonts/din_pro_condensed_light.ttf') format('truetype');
+}

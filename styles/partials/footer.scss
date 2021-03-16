@@ -1,0 +1,14 @@
+.footer {
+    padding: 0;
+    background: none;
+}
+
+.footer__columns {
+    height: 120px;
+}
+
+.footer__desclaimer {
+    @include font-helvetica-roman;
+    @include font-normal;
+    color: $color-brown;
+}

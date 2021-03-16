@@ -1,0 +1,49 @@
+.headline {
+    margin-top: 35px;
+}
+
+.headline__title {
+    color: $color-brown;
+    @include font-helvetica-roman;
+    @include font-extra-large;
+    
+
+    &:first-of-type {
+        margin-bottom: 8px;
+    }
+
+    @include from($widescreen) {
+        padding-left: 50px;
+    }
+}
+
+.headline__band {
+    margin: 25px 0;
+    width: 250px;
+    height: 5px;
+    background: $color-green;
+} 
+
+.headline__description {
+    @include font-helvetica-roman;
+    @include font-normal;
+    color: $color-white;
+
+    @include from($widescreen) {
+        padding-left: 50px;
+    }
+}
+
+.headline__banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 750px;
+    background: url('/images/banner_g3.png') no-repeat top left;
+    background-size: contain;
+
+    @include until($desktop) {
+        display: none;
+    }
+}
