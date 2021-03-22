@@ -16,21 +16,23 @@
                     <div class="carousel__item">
                         <div class="ready-solutions__image ready-solutions__image--optimal"></div>
                         <div class="ready-solutions__type">Оптимальный выбор</div>
-                        <div class="button ready-solutions__button">
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__optimal">
                             <div class="button__link">Подробнее</div>
                         </div>
                     </div>
+
                     <div class="carousel__item is-hidden">
                         <div class="ready-solutions__image ready-solutions__image--optimal"></div>
                         <div class="ready-solutions__type">Оптимальный выбор 2</div>
-                        <div class="button ready-solutions__button">
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__optimal">
                             <div class="button__link">Подробнее</div>
                         </div>
                     </div>
+
                     <div class="carousel__item is-hidden">
                         <div class="ready-solutions__image ready-solutions__image--optimal"></div>
                         <div class="ready-solutions__type">Оптимальный выбор 3</div>
-                        <div class="button ready-solutions__button">
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__optimal">
                             <div class="button__link">Подробнее</div>
                         </div>
                     </div>
@@ -41,4 +43,7 @@
            
         </div>
     </div>
+    
+    <!-- Готовые решения -->
+    <%- require('/html/partials/solutions/optimal.ejs')({ id: "ready-solutions__optimal"}) %>
 </div> 

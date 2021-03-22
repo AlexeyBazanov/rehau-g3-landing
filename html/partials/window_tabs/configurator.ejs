@@ -8,6 +8,11 @@
                 <br><br>
                 Исходя из ваших желаний мы подберем окно, которое вам подойдёт.
             </div>
+
+            <div class="link configurator__solution-link overlay__open mb-5" data-target="configurator" data-overlay="configurator__optimal">
+                Текущая конфигурация: <span class="configurator__solution-name link--green">Оптимальный выбор</span>
+            </div>
+
             <div class="button configurator__button">
                 <div class="button__link">Оставить заявку</div>
             </div>
@@ -32,4 +37,7 @@
             </div>
         </div>
     </div>
+
+     <!-- Готовые решения -->
+     <%- require('/html/partials/solutions/optimal.ejs')({ id: "configurator__optimal"}) %>
 </div> 

@@ -1,3 +1,4 @@
+//TODO удалить
 export default class CircleProgressbar {
     constructor(objectSelector, progressBarId) {
         this._progressbar = document.querySelector(objectSelector).contentDocument.getElementById(progressBarId);

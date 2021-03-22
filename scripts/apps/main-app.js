@@ -1,15 +1,16 @@
 import App from "../components/app.js";
 import TopNavbar from "../components/top-navbar.js";
 import LinkAnchor from "../components/link-anchor.js";
-import PassportCheckForm from "../components/passport-check-form.js";
+import PassportCheckForm from "../components/forms/passport-check-form.js";
 import DealersMap from "../components/dealers-map.js";
 import Tabs from "../components/tabs.js";
-import Carousel from "../components/carousel.js";
 import Modal from "../components/modal.js";
 import Configurator from "../components/configurator.js";
 import PropertyCircles from "../components/property-circles.js";
 import EnergyPanel from "../components/energy-panel.js";
 import PageLoader from "../components/page-loader.js";
+import Overlay from "../components/overlay.js";
+import CarouselInitializer from "../components/carousel-initializer.js";
 
 const mainApp = new App();
 
@@ -23,10 +24,6 @@ mainApp.addComponent("linkAnchor", new LinkAnchor(
     ".link-anchor")
 );
 
-mainApp.addComponent("passportCheckForm", new PassportCheckForm(
-    ".passport-check__form", 
-    ".passport-check__input")
-);
 
 mainApp.addComponent("dealersMap", new DealersMap(
     "dealers-map__map")
@@ -37,9 +34,9 @@ mainApp.addComponent("tabs", new Tabs(
     ".window__tabs-content")
 );
 
-mainApp.addComponent("carousel", new Carousel(
-    ".ready-solutions__carousel")
-);
+mainApp.addComponent("carouselInitializer", new CarouselInitializer(
+    ".carousel"
+));
 
 mainApp.addComponent("modal", new Modal(
     ".modal", ".modal__open-button", 
@@ -47,6 +44,14 @@ mainApp.addComponent("modal", new Modal(
     "is-active",
     "is-clipped")
 );
+
+mainApp.addComponent("overlay", new Overlay(
+    ".overlay__open", 
+    ".overlay__close",
+    "overlay", 
+    "is-hidden", 
+    "is-overlayed"
+));
 
 mainApp.addComponent("propertyCircles", new PropertyCircles(
     "#circle-bars__noise-bar", "#circle-bars__noise-percent",
@@ -68,6 +73,13 @@ mainApp.addComponent("configurator", new Configurator(
     ".slider--safe", 
     ".slider--design")
 );
+
+mainApp.addComponent("passportCheckForm", new PassportCheckForm(
+    ".passport-check__form",
+    ".passport-check__input",
+    ".passport-check__destination",
+    "is-invisible"
+));
 
 mainApp.addComponent("pageLoader", new PageLoader(
     ".pageloader", 

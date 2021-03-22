@@ -22,8 +22,6 @@
 }
 
 .passport-check__form {
-    margin-bottom: 20px;
-
     .input {
         max-width: 260px;
     }
@@ -44,5 +42,12 @@
         .button {
             width: 260px;
         }
+    }
+}
+
+.passport-check__destination {
+    &:not(.is-invisible) {
+        animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 0.8s; /* don't forget to set a duration! */
     }
 }

@@ -29,10 +29,6 @@
     min-height: 400px;
     padding: 30px 50px;
 
-    .title--lined {
-        max-width: 258px;
-    }
-
     @include from($desktop) {
         min-width: 900px;
     }

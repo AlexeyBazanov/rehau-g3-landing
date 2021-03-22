@@ -1,25 +1,21 @@
-import BaseComponent from "./base-component.js";
-
-export default class Carousel extends BaseComponent {
-    constructor(carouselSelector, itemSelector = ".carousel__item",
+export default class Carousel {
+    constructor(carouselElement, itemSelector = ".carousel__item",
         arrowLeftSelector = ".carousel__arrow--left", arrowRightSelector = ".carousel__arrow--right",
         hiddenClass = "is-hidden")
     {
-        super();
-        this._carouselSelector = carouselSelector;
+        this._activeCarousel = carouselElement;
         this._itemSelector = itemSelector;
         this._arrowLeftSelector = arrowLeftSelector;
         this._arrowRightSelector = arrowRightSelector;
         this._hiddenClass = hiddenClass;
-        this._activeCarousel = null;
         this._items = null;
         this._arrowLeft = null;
         this._arrowRight = null;
         this._currentItemIndex = 0;
     }
 
-    init() {
-        this._activeCarousel = document.querySelector(this._carouselSelector);
+    init() 
+    {
         this._items = this._activeCarousel.querySelectorAll(this._itemSelector);
         this._arrowLeft = this._activeCarousel.querySelector(this._arrowLeftSelector);
         this._arrowRight = this._activeCarousel.querySelector(this._arrowRightSelector);

@@ -1,19 +1,48 @@
 import App from "../components/app.js";
-// import CircleProgressbar from "../components/circle-progressbar.js";
-import ProgressBar from "../../node_modules/progressbar.js/dist/progressbar.js";
+import PassportApi from "../components/passport-api.js";
+import PropertyCircles from "../components/property-circles.js";
+import EnergyPanel from "../components/energy-panel.js";
+import PassportLoader from "../components/passport-loader.js";
+import PageLoader from "../components/page-loader.js";
 
 const passportApp = new App();
+const passportApi = new PassportApi("https://window-pass.ru/api", "/passport", "/passport_check");
+
+passportApp.addComponent("propertyCircles", new PropertyCircles(
+    "#circle-bars__noise-bar", "#circle-bars__noise-percent",
+    "#circle-bars__sun-bar", "#circle-bars__sun-percent", 
+    "#circle-bars__safe-bar", "#circle-bars__safe-percent",
+    "#circle-bars__designing-bar", "#circle-bars__designing-percent",
+    false
+));
+
+passportApp.addComponent("energyPanel", new EnergyPanel(
+    ".energy-value", 
+    "energy-value--shown", 
+    1, 7, 3
+));
+
+passportApp.addComponent("passportLoader", new PassportLoader(
+    passportApi,
+    ".passport__number",
+    ".passport__order",
+    ".passport__date",
+    ".passport__agent",
+    ".passport__location",
+    ".passport__profile",
+    ".passport__glass",
+    ".passport__accessories"
+));
+
+passportApp.addComponent("pageLoader", new PageLoader(
+    ".pageloader", 
+    "is-active")
+);
+
+(function() {
+    window.app = passportApp;
+})();
 
 window.addEventListener("load", (event) => {
     passportApp.start();
-
-    var bar = new ProgressBar.Path("#heart-path", {
-        easing: "easeInOut",
-        duration: 5400,
-    });
-      
-    bar.set(0);
-    bar.animate(1);
-    // const circleProgressbar = new CircleProgressbar(".passport__property-others-object", "property-circle-4");
-    // const circleProgressbar2 = new CircleProgressbar(".passport__property-others-object", "property-circle-3");
 });

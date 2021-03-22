@@ -7,7 +7,8 @@ export default class PropertyCircles extends BaseComponent {
         noiseCircleId, noisePercentTextId, 
         sunCirlceId, sunPercentTextId, 
         safeCircleId, safePercentTextId, 
-        designCircleId, designPercentTextId, 
+        designCircleId, designPercentTextId,
+        setDefaultOnInit = true, 
         noiseDefaultPercent = 50, sunDefaultPercent = 50, 
         safeDefaultPercent = 50, designDefaultPercent = 50) 
     {
@@ -24,6 +25,8 @@ export default class PropertyCircles extends BaseComponent {
 
         this._designCircleId = designCircleId;
         this._designPercentTextId = designPercentTextId;
+
+        this._setDefaultOnInit = setDefaultOnInit;
 
         this._noiseDefaultPercent = noiseDefaultPercent;
         this._sunDefaultPercent = sunDefaultPercent;
@@ -72,10 +75,12 @@ export default class PropertyCircles extends BaseComponent {
         this._safePercentText = document.querySelector(this._safePercentTextId);
         this._designPercentText = document.querySelector(this._designPercentTextId);
 
-        this.setNoise(this._noiseDefaultPercent);
-        this.setSun(this._sunDefaultPercent);
-        this.setSafe(this._safeDefaultPercent);
-        this.setDesign(this._designDefaultPercent);
+        if(this._setDefaultOnInit) {
+            this.setNoise(this._noiseDefaultPercent);
+            this.setSun(this._sunDefaultPercent);
+            this.setSafe(this._safeDefaultPercent);
+            this.setDesign(this._designDefaultPercent);
+        }
     }
 
     //TODO решить вопрос с excetion при интенсивном вызове функции
