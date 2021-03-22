@@ -1,10 +1,15 @@
 .footer {
+    margin-top: 160px;
     padding: 0;
     background: none;
+
+    @include until($tablet) {
+        margin-top: 80px;
+    }
 }
 
 .footer__columns {
-    height: 120px;
+    border-top: 2px solid #9595956e;
 }
 
 .footer__desclaimer {

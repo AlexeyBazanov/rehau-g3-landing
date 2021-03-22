@@ -1,8 +1,12 @@
 body {
-    background: $color-blue;
+    // background: $color-blue;
     background: url('/images/template_background.jpg') no-repeat center;
     background-position: center center;
     background-size: cover;
+    // background: #000428;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     @include font-helvetica-light();
 }
 
@@ -14,38 +18,33 @@ body {
 
 .container--blue {
     background: rgb(19,52,80);
-    background: linear-gradient(25deg, #13202924 0%, #13334e6e 100%);
+    background: linear-gradient(25deg, #13202924 0%, #13334e 100%);
+}
+
+.container--padding {
     padding: 30px;
 }
 
-.title {
-    color: $color-brown;
-    @include font-larger;
-    @include font-helvetica-roman;
-    text-align: center;
-    font-weight: normal;
-}
+.container--padding-large {
+    padding: 120px 50px 50px 50px;
 
-.title--main {
-    margin: 25px 0;
-}
-
-.sub-title {
-    margin-bottom: 5px;
-    
-    color: $color-white;
-    @include font-bigger;
-}
-
-.text {
-    color: $color-white;
-    @include font-normal;
-}
-
-.anchor--benefits {
-    margin-top: 80px;
-    
     @include until($desktop) {
-        margin-top: 40px;
+        padding: 40px;
+    }
+}
+
+.space-top-large {
+    margin-top: 120px;
+
+    @include until($tablet) {
+        margin-top: 60px;
+    } 
+}
+
+.space-top-medium {
+    margin-top: 60px;
+
+    @include until($tablet) {
+        margin-top: 50px;
     }
 }

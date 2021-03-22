@@ -1,0 +1,64 @@
+// --- > Вкладки --- >
+.tabs--blue {
+    margin-bottom: 0 !important;
+    background: #0505086b;
+    border-bottom: 3px solid $color-aqua-blue;
+
+    ul {
+        border-bottom: none;
+    }
+    .tab {
+        background: url('/images/line_grey.png') no-repeat center left;
+
+        a {
+            padding-top: 12px;
+            padding-bottom: 8px;
+            border-bottom: none;
+            color: $color-white;
+            span {
+                opacity: 0.8;
+            }
+        }
+
+        &.is-active {
+            background: none;
+            background-color: $color-aqua-blue !important;
+            
+            +.tab {
+                background: none;
+            }
+
+            a {
+                color: $color-white;
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:first-of-type {
+            background: none;
+        }
+
+        &:hover {
+            a {
+                color: $color-brown;
+            }
+        }
+    }
+}
+
+.tab-content {
+    min-height: 700px;
+    padding-top: 1px;
+    
+    @include until($tablet) {
+        min-height: 500px;
+    }
+
+    &:not(.is-hidden) {
+        animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 0.8s; /* don't forget to set a duration! */
+    }
+}
+// < --- Вкладки < ---

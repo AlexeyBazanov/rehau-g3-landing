@@ -1,0 +1,81 @@
+.configurator__title {
+    @include from($tablet) {
+        width: 235px;
+    }
+}
+
+.configurator__description {
+    @include from($tablet) {
+        max-width: 400px;
+        margin: 30px 0;
+    }
+
+    @include until($tablet) {
+        margin: 15px 0;
+        text-align: center;
+    }
+}
+
+.configurator__button {
+    @include until($tablet) {
+        display: block;
+        width: 180px;
+        margin: 0 auto;
+    }
+}
+
+.configurator__passport {
+    @include from($desktop) {
+        margin-top: 45px;
+    }
+}
+
+.configurator__sliders {
+    margin-top: 35px;
+}
+
+.slider {
+    margin-bottom: 2px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.slider-title {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: $color-white;
+}
+
+.slider--energy {
+    .noUi-connect {
+        background-color: #f61421;
+    }
+}
+
+.slider--noise {
+    .noUi-connect {
+        background-color: #ff9f32;
+    }
+}
+
+.slider--sun {
+    .noUi-connect {
+        background-color: #008f2c;
+    }
+}
+
+.slider--safe {
+    .noUi-connect {
+        background-color: #f33b15;
+    }
+}
+
+.slider--design {
+    .noUi-connect {
+        background-color: #00992d;
+    }
+}
+

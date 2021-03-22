@@ -6,6 +6,7 @@ const config = {
     mode: "development",
     entry: {
         index: "./scripts/index.js",
+        passport: "./scripts/passport.js",
     },
     output: {
         filename: "[name].[fullhash].js",
@@ -13,8 +14,18 @@ const config = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        // Главная страница
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "/html/index.html.ejs"),
+            template: path.join(__dirname, "/html/index.ejs"),
+            filename: "./index.html",
+            chunks: ["index",],
+            inject: true,
+        }),
+        // Страница паспорта окна
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "/html/passport.ejs"),
+            filename: "./passport.html",
+            chunks: ["passport",],
             inject: true,
         }),
     ],
@@ -36,14 +47,13 @@ const config = {
                 loader: "babel-loader",
                 exclude: "/node_modules/",
             },
-            {
-                test: /\.ejs$/,
-                loader: "ejs-loader",
-                options: {
-                    variable: "data",
-                    interpolate : "\\{\\{(.+?)\\}\\}",
-                    evaluate : "\\[\\[(.+?)\\]\\]",
-                },
+            { 
+                test: /\.ejs$/i, 
+                use: [ 
+                    { 
+                        loader: "ejs-easy-loader",
+                    }, 
+                ], 
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -59,7 +69,7 @@ const config = {
                 ],
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 loader: "file-loader",
                 options: {
                     name() {
@@ -68,10 +78,11 @@ const config = {
                         }
                         return "[contenthash].[ext]";
                     },
+                    outputPath: "images/",
                 },
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                     {
                         loader: "file-loader",

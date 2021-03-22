@@ -1,0 +1,30 @@
+#window-hint-modal {
+    .modal-content {
+        min-height: 550px;
+        padding: 30px;
+
+        @include until($widescreen) {
+            min-height: 390px;
+        }
+
+        @include until($tablet) {
+            padding: 20px 0;
+            min-height: 230px;
+        }
+    }
+
+    .modal__close-button {
+        left: 20px;
+
+        @include until($tablet) {
+            left: -5px;
+            top: -15px;
+        }
+    }
+}
+
+.window-hint-modal__content {
+    background: url('/images/window_hint.png') no-repeat center;
+    background-size: contain;
+    height: 100%;
+}

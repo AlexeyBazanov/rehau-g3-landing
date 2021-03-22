@@ -10,6 +10,10 @@
     font-family: 'DIN Pro Condensed Light';
 }
 
+@mixin font-bebas-nue {
+    font-family: 'Bebas Neue Regular';
+}
+
 @mixin font-largest {
     font-size: 145px;
     line-height: 140px;
@@ -48,6 +52,14 @@
     }
 }
 
+@mixin font-medium {
+    font-size: 28px;
+ 
+    @include until($desktop) {
+        font-size: 24px;
+    }
+}
+
 @mixin font-large {
     font-size: 24px;
 
@@ -70,4 +82,8 @@
     @include until($desktop) {
         font-size: 16px;
     }
+}
+
+@mixin font-small {
+    font-size: 15px;
 }

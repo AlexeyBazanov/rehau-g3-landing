@@ -1,0 +1,74 @@
+// ---- >> Формы ---- >>
+.input, .textarea {
+    border-radius: 0;
+    border: none;
+    background: $color-aqua-blue;
+    color: $color-white;
+    @include font-helvetica-roman;
+
+    &::placeholder {
+        color: $color-white;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px $color-brown;
+    }
+
+    &.input--white {
+        background: $color-white;
+        color: $color-black; 
+
+        &::placeholder {
+            color: $color-black;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px $color-aqua-blue;
+        }
+    }
+}
+
+.checkbox {
+    color: $color-white;
+    @include font-normal;
+    font-weight: 200;
+
+    &:hover {
+        color: rgba(255, 255, 255, 0.829);
+    }
+}
+
+input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 4px;
+}
+
+.label {
+    color: $color-white;;
+    @include font-normal;
+    font-weight: 200;
+}
+
+.form-required {
+    color: $color-red;
+    font-weight: 400;
+    padding-right: 5px;
+}
+
+.field.is-grouped {
+    @include mobile {
+        flex-direction: column;
+
+        .control {
+            margin-right: 0 !important;
+            margin-bottom: 6px !important;
+
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
+// << ---- Формы ---- <<

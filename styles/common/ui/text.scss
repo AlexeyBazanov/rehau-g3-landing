@@ -1,0 +1,49 @@
+.title {
+    color: $color-brown;
+    @include font-larger;
+    @include font-helvetica-roman;
+    text-align: center;
+    font-weight: normal;
+}
+
+.title--main {
+    margin: 25px 0;
+}
+
+.title--lined {
+    padding-bottom: 5px;
+    max-width: 350px;
+    text-align: left;
+    @include font-medium;
+    font-weight: 400;
+    color: $color-white;
+    border-bottom: 5px solid $color-green;
+
+    @include until($desktop) {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+.title--lened-offset {
+    position: relative;
+    right: 50px;
+    padding-left: 50px;
+
+    @include until($desktop) {
+        right: 0;
+        padding-left: 0;
+    }
+}
+
+.sub-title {
+    margin-bottom: 5px;
+    
+    color: $color-white;
+    @include font-bigger;
+}
+
+.text {
+    color: $color-white;
+    @include font-normal;
+}

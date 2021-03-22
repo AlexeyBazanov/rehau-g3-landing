@@ -1,0 +1,25 @@
+.noUi-handle {
+    border-radius: 2px !important;
+    width: 30px !important;
+    height: 30px !important;
+    top: -7px !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    &:active {
+        outline: none;
+    }
+
+    &::before, &::after {
+        display: none;
+    }
+}
+
+.noUi-target {
+    border: none !important;
+    box-shadow: none !important; 
+}
+
+.noUi-target, .noUi-connects {
+    border-radius: 2px;
+}

@@ -4,7 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rehau G3</title>
+
+    <style>
+        .circular-chart {
+            display: block;
+            margin: 10px auto;
+            max-width: 80%;
+            max-height: 250px;
+        }
+
+        .circle {
+            stroke: #4CC790;
+            fill: none;
+            stroke-width: 2.8;
+            stroke-linecap: round;
+            animation: progress 1s ease-out forwards;
+        }
+
+        @keyframes progress {
+            0% {
+                stroke-dasharray: 0 100;
+            }
+        }
+        /* *{
+            box-sizing:border-box;
+        }
+        svg{
+            width:240px;
+            height:200px;
+            border:1px solid;
+        }
+        .progress-bar{
+            fill:none;
+            stroke:#cda;
+            stroke-width:20px;
+        }
+        .progress-fill{
+            stroke-width:1;
+            stroke:gray;
+            fill:#eee;
+        }
+        text{
+            text-anchor:middle;
+        }
+        .controller{
+            vertical-align:top;
+        } */
+    </style>
 </head>
 <body>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+    <!-- <svg>
+        <path class="progress-fill" d="M19.5,100 a91,91 0 0 1 201,0 h-21 a69,69 0 0 0 -159,0 z"/>
+        <path class="progress-bar" d="M30,100 a80,80 0 0 1 180,0" />
+        
+        <text x="30" y="120">0</text>
+        <text x="210" y="120">100</text>
+    </svg> -->
+
+    <svg viewBox="0 0 36 36" class="circular-chart">
+        <path class="circle"
+          stroke-dasharray="60, 100"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+
+        <path class="circle"
+          stroke-dasharray="60, 100"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+
+        <!-- <path class="fil1" stroke-dasharray="30, 100" d="M20500 15565.96c5126.56,0 9284.03,4157.47 9284.03,9284.04 0,5126.55 -4157.47,9284.02 -9284.03,9284.02 -5126.56,0 -9284.03,-4157.47 -9284.03,-9284.02 0,-5126.57 4157.47,-9284.04 9284.03,-9284.04z"/>
+        <path class="fil2" stroke-dasharray="20, 100" d="M20500 12780.75c6664.53,0 12069.24,5404.71 12069.24,12069.25 0,6664.52 -5404.71,12069.23 -12069.24,12069.23 -6664.53,0 -12069.24,-5404.71 -12069.24,-12069.23 0,-6664.54 5404.71,-12069.25 12069.24,-12069.25z"/>
+        <path class="fil3" stroke-dasharray="50, 100" d="M20500 9995.54c8202.5,0 14854.45,6651.95 14854.45,14854.47 0,8202.48 -6651.95,14854.43 -14854.45,14854.43 -8202.5,0 -14854.45,-6651.95 -14854.45,-14854.43 0,-8202.52 6651.95,-14854.47 14854.45,-14854.47z"/>
+        <path class="fil4" stroke-dasharray="10, 100" d="M20500 7210.33c9740.46,0 17639.66,7899.2 17639.66,17639.68 0,9740.44 -7899.2,17639.64 -17639.66,17639.64 -9740.46,0 -17639.65,-7899.2 -17639.65,-17639.64 0,-9740.48 7899.19,-17639.68 17639.65,-17639.68z"/> -->
+
+    </svg>
+
+    <!-- <svg viewBox="0 0 36 36">
+        <path
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+          fill="none"
+          stroke="#444";
+          stroke-width="1";
+          stroke-dasharray="75, 100"
+        />
+    </svg> -->
+
+    <!-- <input type="number" class="controller" min="0" max="100" strp="1" value="0" />
+
+    <script>
+        function demo(){
+        var val = this.value || 0,
+            bar = $(this).prev('svg').find('.progress-bar'),
+            strokeLength = bar[0].getTotalLength();
+        bar.css('stroke-dasharray',strokeLength*val/100+','+strokeLength);
+        }
+        $('.controller').each(demo);
+        $('.controller').on('input',demo);
+    </script> -->
 </body>
 </html>

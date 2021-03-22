@@ -1,0 +1,35 @@
+<!-- Якорь на блок с окнами -->
+<%- require('/html/partials/anchors/anchor_window.html').default %>
+
+<div class="window">
+    <div class="container">
+        <div class="column">
+            <div class="title title--main">Подберите свое окно</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="window__tabs tabs tabs--blue is-fullwidth">
+            <ul>
+                <li class="tab" data-target="clear-choice"><a><span>Понятный выбор</span></a></li>
+                <li class="tab" data-target="ready-solutions"><a><span>Готовые решения</span></a></li>
+                <li class="tab" data-target="configurator"><a><span>Конфигуратор</span></a></li>
+                <li class="tab is-active" data-target="call-apply"><a><span>Заявка на звонок</span></a></li>
+            </ul>
+        </div>
+
+        <div class="window__tabs-content">
+            <!-- Понятный выбор -->
+            <%- require('/html/partials/window_tabs/clear_choice.html').default %>
+            
+            <!-- Готовые решения -->
+            <%- require('/html/partials/window_tabs/ready_solutions.html').default %>
+           
+            <!-- Конфигуратор -->
+            <%- require('/html/partials/window_tabs/configurator.ejs')() %>
+
+            <!-- Заявка на звонок -->
+            <%- require('/html/partials/window_tabs/call_apply.html').default %>
+        </div>
+    </div>
+</div>

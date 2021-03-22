@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ваш паспорт окна</title>
+</head>
+<body>
+    <!-- Шапка -->
+    <%- require('/html/partials/passport_page/header_back.html').default %>
+
+    <!-- Основной блок -->
+    <%- require('/html/partials/passport_page/main.ejs')() %>
+
+    <!-- Подвал -->
+    <%- require('/html/partials/footer.html').default %>
+</body>
+</html>

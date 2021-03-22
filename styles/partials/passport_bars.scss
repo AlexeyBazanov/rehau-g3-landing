@@ -1,0 +1,42 @@
+.passport-bars {
+    display: flex;
+    padding: 0 25px;
+    border: 3px solid $color-light-grey;
+    border-radius: 6px;
+
+    @include until($tablet) {
+        display: block;
+    }
+}
+
+.passport-bars--darken {
+    background: #000000ad;
+}
+
+.passport-bars__energy, .passport-bars__properties {
+    height: 330px;
+}
+
+.passport-bars__energy--half, .passport-bars__properties--half {
+    width: 50%;
+
+    @include until($tablet) {
+        width: 100%;
+    }
+}
+
+.energy-value {
+    opacity: 0;
+    font-weight: bold;
+    // transition: opacity 0.3s;
+}
+
+.energy-value--shown {
+    opacity: 1;
+    animation: fadeInTopRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.3s; /* don't forget to set a duration! */
+}
+
+.circle-bars__percent, .circle-bars__name {
+    font-weight: bold;
+}

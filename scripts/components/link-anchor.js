@@ -17,7 +17,13 @@ export default class LinkAnchor extends BaseComponent {
     }
 
     _handleClick(link) {
-        document.querySelector(link.getAttribute("href")).scrollIntoView({
+        const anchor = document.querySelector(link.getAttribute("href"));
+        const anchorRect = anchor.getBoundingClientRect();
+        const anchorBottomPosition = anchorRect.y + anchorRect.height;
+
+        window.scroll({
+            top: anchorBottomPosition, 
+            left: 0, 
             behavior: "smooth",
         });
     }

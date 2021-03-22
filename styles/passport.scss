@@ -1,0 +1,30 @@
+// Библиотеки
+@import '~modern-css-reset/dist/reset.min.css';
+@import '~bulma/css/bulma.css';
+@import '~bulma/sass/utilities/mixins.sass';
+
+// Шрифты, переменные, примеси
+@import './common/fonts.scss';
+@import './common/variables.scss';
+@import './common/mixins.scss';
+
+// Логотипы
+@import './common/logotips.scss';
+
+// UI
+@import './common/ui/links.scss';
+
+// Основная тема
+@import './partials/template.scss';
+
+// Шапка сайта
+@import './partials/passport_page/header_back.scss';
+
+// Стили паспорта
+@import './partials/passport_bars.scss';
+
+// Основной блок
+@import './partials/passport_page/main.scss';
+
+// Подвал сайта
+@import './partials/footer.scss';

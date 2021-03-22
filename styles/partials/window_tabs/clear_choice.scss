@@ -1,0 +1,31 @@
+.clear-choice {
+    padding: 120px 0 0 50px;
+    background: url('/images/architector.jpg') no-repeat right bottom;
+    background-size: cover;
+
+
+
+    @include until($desktop) {
+        background-position: left top;
+        padding: 40px 0 0 40px;
+    }
+}
+
+.clear-choice__title {
+    margin-bottom: 15px;
+    color: $color-black;
+    @include font-large;
+    @include font-helvetica-roman;
+    font-weight: 600;
+}
+
+.clear-choice__text {
+    width: 38%;
+    color: $color-black;
+    @include font-normal;
+    @include font-helvetica-roman;
+
+    @include until($desktop) {
+        width: 70%;
+    }
+}

@@ -1,3 +1,6 @@
+<!-- Якорь на блок с проверкой паспорта -->
+<%- require('/html/partials/anchors/anchor_passport_check.html').default %>
+
 <div class="passport-check">
     <div class="container">
         <div class="column">
@@ -5,7 +8,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="container--blue">
+        <div class="container--blue container--padding">
             <div class="columns is-vcentered passport-check__columns">
                 <div class="column is-8">
                    <div class="passport-check__description">
@@ -18,11 +21,11 @@
                     <form class="passport-check__form">
                         <div class="sub-title">Введите ID вашего окна</div>
                         <input class="input passport-check__input" type="text" name="passport-number" placeholder="XXXX-XXXX-XXXX" autocomplete="off">
-                        <p class="help is-danger">Некорректный номер</p>
+                        <p class="help is-danger is-hidden">Некорректный номер</p>
                     </form>
                     <div class="passport-check__hint">
                         <div class="sub-title">Где найти ID окна?</div>
-                        <div class="button button--arrow-down link--modal">
+                        <div class="button button--arrow-down modal__open-button" data-modal="window-hint-modal">
                             <div class="button__link">Смотреть</div>
                         </div>
                     </div>

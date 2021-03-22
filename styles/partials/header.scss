@@ -57,13 +57,14 @@
         padding-bottom: 30px;
         display: block;
         
-        animation: bounceInDown; 
+        animation: backInDown; 
         animation-duration: 0.8s; 
     }
 
     @include until($desktop) {
         width: 100%;
         display: none;
+        float: inherit;
     }
 
     @include widescreen-only {

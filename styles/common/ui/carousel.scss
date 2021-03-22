@@ -1,0 +1,42 @@
+.carousel {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.carousel__arrow {
+    display: flex;
+    height: 60px;
+    width: 40px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.carousel__arrow--left {
+    background: url("/images/arrow_left.png") no-repeat center;
+    background-size: contain;
+}
+
+.carousel__arrow--right {
+    background: url("/images/arrow_right.png") no-repeat center;
+    background-size: contain;
+}
+
+.carousel__items {
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.carousel__item {
+    width: 100%;
+
+    &:not(.is-hidden) {
+        animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 0.8s; /* don't forget to set a duration! */
+    }
+}

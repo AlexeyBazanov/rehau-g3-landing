@@ -1,0 +1,35 @@
+<div id="configurator" class="tab-content configurator container--blue container--padding-large is-hidden">
+    <div class="columns">
+        <div class="column is-5-desktop">
+            <div class="configurator__title title--lined title--lened-offset">Конфигуратор</div>
+            <div class="configurator__description text">
+                Задайте параметры окна, которые важны для вас, при помощи нашего конфигуратора: 
+                отметьте нужный класс энергоэффективности и задайте положения бегунков для остальных параметров.
+                <br><br>
+                Исходя из ваших желаний мы подберем окно, которое вам подойдёт.
+            </div>
+            <div class="button configurator__button">
+                <div class="button__link">Оставить заявку</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="passport-bars configurator__passport"> 
+                <div class="passport-bars__energy passport-bars__energy--half">
+                    <%- require('/html/partials/passport/properties/energy-panel.html').default %>
+                </div>
+                <div class="passport-bars__properties passport-bars__properties--half">
+                    <%- require('/html/partials/passport/properties/circle-bars.html').default %>
+                </div>
+            </div>
+
+            <div class="configurator__sliders">
+                <span class="slider-title">Энергоэффективность</span><div class="slider slider--energy"></div>
+                <span class="slider-title">Шумоизоляция</span><div class="slider slider--noise"></div>
+                <span class="slider-title">Солнцезащита</span><div class="slider slider--sun"></div>
+                <span class="slider-title">Безопасность</span><div class="slider slider--safe"></div>
+                <span class="slider-title">Дизайн</span><div class="slider slider--design"></div>
+            </div>
+        </div>
+    </div>
+</div> 

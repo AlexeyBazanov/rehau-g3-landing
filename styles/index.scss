@@ -2,7 +2,8 @@
 @import '~modern-css-reset/dist/reset.min.css';
 @import '~bulma/css/bulma.css';
 @import '~bulma/sass/utilities/mixins.sass';
-@import "~animate.css/source/animate.css";
+@import '~bulma-pageloader/dist/css/bulma-pageloader.min.css';
+@import "~nouislider/distribute/nouislider.min.css";
 
 // Шрифты, переменные, примеси
 @import './common/fonts.scss';
@@ -10,7 +11,7 @@
 @import './common/mixins.scss';
 
 // UI
-@import './common/ui.scss';
+@import './common/ui/index.scss';
 
 // Логотипы
 @import './common/logotips.scss';
@@ -27,6 +28,15 @@
 // Основные преимущества
 @import './partials/benefits.scss';
 
+// Подбор окна, вкладки
+@import './partials/window_tabs/clear_choice.scss';
+@import './partials/window_tabs/ready_solutions.scss';
+@import './partials/window_tabs/configurator.scss';
+@import './partials/window_tabs/call_apply.scss';
+
+// Паспорт окна
+@import './partials/passport_bars.scss';
+
 // Проверка паспорта окна
 @import './partials/passport_check.scss';
 
@@ -35,6 +45,11 @@
 
 // Обратная связь
 @import './partials/feedback.scss';
+
+// Модальные окна
+@import './partials/modals/warranty.scss';
+@import './partials/modals/simple-choice.scss';
+@import './partials/modals/window-hint.scss';
 
 // Подвал сайта
 @import './partials/footer.scss';

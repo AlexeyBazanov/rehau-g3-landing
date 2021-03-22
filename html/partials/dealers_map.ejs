@@ -1,22 +1,25 @@
+<!-- Якорь на блок с картой дилеров -->
+<%- require('/html/partials/anchors/anchor_dealers_map.html').default %>
+
 <div class="dealers-map">
     <div class="container">
         <div class="title title--main">Карта дилеров</div>
     </div>
 
     <div class="container">
-        <div class="container--blue">
+        <div class="container--blue container--padding">
             <div id="dealers-map__map" class="dealers-map__map"></div>
             
             <form class="dealers-map__form">
                 <div class="field is-grouped is-grouped-centered">
                     <div class="control is-small">
                         <input class="input" type="text" name="dealer-name" placeholder="Поиск по названию" autocomplete="off">
-                        <p class="help is-danger">Некорректое название</p>
+                        <p class="help is-danger is-hidden">Некорректое название</p>
                     </div>
     
                     <div class="control is-small">
                         <input class="input" type="text" name="dealer-city" placeholder="Город" autocomplete="off">
-                        <p class="help is-danger">Город не найден</p>
+                        <p class="help is-danger is-hidden">Город не найден</p>
                     </div>
     
                     <div class="control">
