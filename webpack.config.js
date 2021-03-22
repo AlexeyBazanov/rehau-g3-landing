@@ -11,6 +11,7 @@ const config = {
     output: {
         filename: "[name].[fullhash].js",
         path: path.resolve(__dirname, "dist"),
+        publicPath: "/rehau-g3-landing/",
     },
     plugins: [
         new CleanWebpackPlugin(),
