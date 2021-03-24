@@ -43,6 +43,9 @@
     background: url('/images/banner_g3.png') no-repeat top left;
     background-size: contain;
 
+    animation: zoomInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+
     @include until($desktop) {
         display: none;
     }

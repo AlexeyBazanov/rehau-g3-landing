@@ -22,17 +22,41 @@
                     </div>
 
                     <div class="carousel__item is-hidden">
-                        <div class="ready-solutions__image ready-solutions__image--optimal"></div>
-                        <div class="ready-solutions__type">Оптимальный выбор 2</div>
-                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__optimal">
+                        <div class="ready-solutions__image ready-solutions__image--safe"></div>
+                        <div class="ready-solutions__type">Безопасность в доме</div>
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__safe">
                             <div class="button__link">Подробнее</div>
                         </div>
                     </div>
 
                     <div class="carousel__item is-hidden">
-                        <div class="ready-solutions__image ready-solutions__image--optimal"></div>
-                        <div class="ready-solutions__type">Оптимальный выбор 3</div>
-                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__optimal">
+                        <div class="ready-solutions__image ready-solutions__image--silence"></div>
+                        <div class="ready-solutions__type">Тишина в доме</div>
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__silence">
+                            <div class="button__link">Подробнее</div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item is-hidden">
+                        <div class="ready-solutions__image ready-solutions__image--beauty"></div>
+                        <div class="ready-solutions__type">Красота в доме</div>
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__beauty">
+                            <div class="button__link">Подробнее</div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item is-hidden">
+                        <div class="ready-solutions__image ready-solutions__image--sun"></div>
+                        <div class="ready-solutions__type">Солнце в доме</div>
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__sun">
+                            <div class="button__link">Подробнее</div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__item is-hidden">
+                        <div class="ready-solutions__image ready-solutions__image--warm"></div>
+                        <div class="ready-solutions__type">Тепло в доме</div>
+                        <div class="button ready-solutions__button overlay__open" data-target="ready-solutions" data-overlay="ready-solutions__warm">
                             <div class="button__link">Подробнее</div>
                         </div>
                     </div>
@@ -46,4 +70,9 @@
     
     <!-- Готовые решения -->
     <%- require('/html/partials/solutions/optimal.ejs')({ id: "ready-solutions__optimal"}) %>
+    <%- require('/html/partials/solutions/safe.ejs')({ id: "ready-solutions__safe"}) %>
+    <%- require('/html/partials/solutions/silence.ejs')({ id: "ready-solutions__silence"}) %>
+    <%- require('/html/partials/solutions/beauty.ejs')({ id: "ready-solutions__beauty"}) %>
+    <%- require('/html/partials/solutions/sun.ejs')({ id: "ready-solutions__sun"}) %>
+    <%- require('/html/partials/solutions/warm.ejs')({ id: "ready-solutions__warm"}) %>
 </div> 

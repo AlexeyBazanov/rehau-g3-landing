@@ -34,7 +34,8 @@ export default class PassportCheckForm extends BaseComponent {
     _setLinkValue() {
         if(this._idInput.value.length == 14) {
             this._passportLink.classList.remove(this._hiddenClass);
-            this._passportLink.setAttribute("href", "/passport.html?p=h13vfv39nh1v8zv42");
+            //TODO поменять ссылку
+            this._passportLink.setAttribute("href", "/rehau-g3-landing/passport.html?p=h13vfv39nh1v8zv42");
         } else {
             this._passportLink.classList.add(this._hiddenClass);
         }

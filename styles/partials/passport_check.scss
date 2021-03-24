@@ -24,6 +24,16 @@
 .passport-check__form {
     .input {
         max-width: 260px;
+        background: $color-white;
+        border: 2px solid $color-brown;
+        color: $color-deep-blue;
+        font-weight: bold;
+        @include font-normal;
+
+        &::placeholder {
+            color: $color-grey;
+            font-weight: bold;
+        }
     }
 
     @media only screen and (min-width: 658px) and (max-width: 768px)  {
@@ -46,6 +56,9 @@
 }
 
 .passport-check__destination {
+    display: inline-block;
+    line-height: 17px;
+
     &:not(.is-invisible) {
         animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 0.8s; /* don't forget to set a duration! */

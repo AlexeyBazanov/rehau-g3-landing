@@ -11,6 +11,8 @@ import EnergyPanel from "../components/energy-panel.js";
 import PageLoader from "../components/page-loader.js";
 import Overlay from "../components/overlay.js";
 import CarouselInitializer from "../components/carousel-initializer.js";
+import ElementAnimator from "../components/element-animator.js";
+import {AnimateElement,} from "../components/element-animator.js";
 
 const mainApp = new App();
 
@@ -23,7 +25,6 @@ mainApp.addComponent("topNavbar", new TopNavbar(
 mainApp.addComponent("linkAnchor", new LinkAnchor(
     ".link-anchor")
 );
-
 
 mainApp.addComponent("dealersMap", new DealersMap(
     "dealers-map__map")
@@ -85,6 +86,22 @@ mainApp.addComponent("pageLoader", new PageLoader(
     ".pageloader", 
     "is-active")
 );
+
+mainApp.addComponent("elementAnimator", new ElementAnimator(
+    [
+        new AnimateElement(".benefits__banner_1", "zoomInRight", 1, true),
+        new AnimateElement(".benefits__banner_2", "zoomInLeft", 1, true),
+        new AnimateElement(".benefits__banner_3", "zoomInRight", 1, true),
+
+        new AnimateElement(".anchor--window", "fadeInDown", 1, true),
+        new AnimateElement(".anchor--passport-check", "fadeInDown", 1, true),
+        new AnimateElement(".anchor--dealers-map", "fadeInDown", 1, true),
+        new AnimateElement(".anchor--feedback", "fadeInDown", 1, true),
+
+        new AnimateElement(".feedback__contact--phone", "fadeInUp", 1, true),
+        new AnimateElement(".feedback__contact--email", "fadeInUp", 1, true),
+    ]
+));
 
 (function() {
     window.app = mainApp;

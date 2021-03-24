@@ -48,3 +48,7 @@ body {
         margin-top: 50px;
     }
 }
+
+.tab {
+    @include font-normal;
+}

@@ -41,3 +41,14 @@
     color: $color-white;
     margin: 10px 0 15px 0;
 }
+
+.overlay {
+    ul {
+        margin-top: 10px;
+
+        li {
+            list-style: disc;
+            margin-left: 16px;
+        }
+    }
+}

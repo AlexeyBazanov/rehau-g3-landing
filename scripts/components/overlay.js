@@ -45,6 +45,7 @@ export default class Overlay extends BaseComponent {
         container.classList.add(this._overlayedClass);
 
         this._toggleContainerChilds(container);
+        this._toggleOverlay(overlay);
     }
 
     _closeOverlay(button) {
@@ -52,18 +53,25 @@ export default class Overlay extends BaseComponent {
         
         if(!container) { return; }
 
-        const overlay = container.querySelector("."+this._overlayClass);
+        const overlay = container.querySelector("."+this._overlayClass+":not(."+this._hiddenClass+")");
 
         if(!overlay) { return; }
 
         this._toggleContainerChilds(container);
+        this._toggleOverlay(overlay);
 
         container.classList.remove(this._overlayedClass);
     }
 
     _toggleContainerChilds(container) {
         for (var i = 0; i < container.children.length; i++) {
-            container.children[i].classList.toggle(this._hiddenClass);
+            if(!container.children[i].classList.contains(this._overlayClass)) {
+                container.children[i].classList.toggle(this._hiddenClass);
+            }
         }
+    }
+
+    _toggleOverlay(overlay) {
+        overlay.classList.toggle(this._hiddenClass);
     }
 }
