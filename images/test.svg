@@ -1,7 +1,0 @@
-<svg>
-  <path class="progress-fill" d="M19.5,100 a91,91 0 0 1 201,0 h-21 a69,69 0 0 0 -159,0 z"/>
-  <path class="progress-bar" d="M30,100 a80,80 0 0 1 180,0" />
-  
-  <text x="30" y="120">0</text>
-  <text x="210" y="120">100</text>
-</svg>

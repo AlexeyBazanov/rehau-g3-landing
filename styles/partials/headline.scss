@@ -40,13 +40,29 @@
     right: 0;
     width: 50%;
     height: 750px;
-    background: url('/images/banner_g3.png') no-repeat top left;
-    background-size: contain;
-
-    animation: zoomInRight; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    opacity: 0.7;
+    transition: opacity 1s; 
 
     @include until($desktop) {
         display: none;
     }
+}
+
+.headline__banner--fade {
+    opacity: 0;
+}
+
+.headline__banner--img1 {
+    background: url('/images/banner_g3_1.png') no-repeat top left;
+    background-size: contain;
+}
+
+.headline__banner--img2 {
+    background: url('/images/banner_g3_2.png') no-repeat top left;
+    background-size: contain;
+}
+
+.headline__banner--img3 {
+    background: url('/images/banner_g3_3.png') no-repeat top left;
+    background-size: contain;
 }

@@ -13,6 +13,9 @@ import Overlay from "../components/overlay.js";
 import CarouselInitializer from "../components/carousel-initializer.js";
 import ElementAnimator from "../components/element-animator.js";
 import {AnimateElement,} from "../components/element-animator.js";
+import ApplyButton from "../components/apply-button.js";
+import HeadlineCarousel from "../components/headline-carousel.js";
+
 
 const mainApp = new App();
 
@@ -101,6 +104,19 @@ mainApp.addComponent("elementAnimator", new ElementAnimator(
         new AnimateElement(".feedback__contact--phone", "fadeInUp", 1, true),
         new AnimateElement(".feedback__contact--email", "fadeInUp", 1, true),
     ]
+));
+
+mainApp.addComponent("applyButton", new ApplyButton(
+    ".button--apply", 
+    ".tab[data-target='call-apply']", 
+    "#call-apply__solution"
+));
+
+mainApp.addComponent("headlineCarousel", new HeadlineCarousel(
+    ".headline__banner",
+    ["headline__banner--img1", "headline__banner--img2", "headline__banner--img3",],
+    "headline__banner--fade",
+    12
 ));
 
 (function() {

@@ -13,7 +13,7 @@
                 Текущая конфигурация: <span class="configurator__solution-name link--green">Оптимальный выбор</span>
             </div>
 
-            <div class="button configurator__button">
+            <div class="button configurator__button button--apply" data-value="optimal">
                 <div class="button__link">Оставить заявку</div>
             </div>
         </div>
@@ -40,4 +40,9 @@
 
      <!-- Готовые решения -->
      <%- require('/html/partials/solutions/optimal.ejs')({ id: "configurator__optimal"}) %>
+     <%- require('/html/partials/solutions/safe.ejs')({ id: "configurator__safe"}) %>
+     <%- require('/html/partials/solutions/silence.ejs')({ id: "configurator__silence"}) %>
+     <%- require('/html/partials/solutions/beauty.ejs')({ id: "configurator__beauty"}) %>
+     <%- require('/html/partials/solutions/sun.ejs')({ id: "configurator__sun"}) %>
+     <%- require('/html/partials/solutions/warm.ejs')({ id: "configurator__warm"}) %>
 </div> 

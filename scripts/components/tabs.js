@@ -23,12 +23,12 @@ export default class Tabs extends BaseComponent {
         this._tabs.forEach(tab => {
             tab.addEventListener("click", (event) => {
                 event.preventDefault();
-                this._handleTabClick(tab);
+                this.handleTabClick(tab);
             });
         });
     }
 
-    _handleTabClick(tab) {
+    handleTabClick(tab) {
         if(tab.classList.contains(this._activeClass)) {
             return;
         }
