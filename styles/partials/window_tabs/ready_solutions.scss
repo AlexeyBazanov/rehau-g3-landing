@@ -16,12 +16,36 @@
     }
 }
 
+.ready-solutions__image--optimal {
+    background: url('/images/ready_solutions__optimal.jpg') no-repeat center;
+}
+
+.ready-solutions__image--sun {
+    background: url('/images/ready_solutions__sun.jpg') no-repeat center;
+}
+
+.ready-solutions__image--safe {
+    background: url('/images/ready_solutions__safe.jpg') no-repeat center;
+}
+
+.ready-solutions__image--silence {
+    background: url('/images/ready_solutions__silence.jpg') no-repeat center;
+}
+
+.ready-solutions__image--warm {
+    background: url('/images/ready_solutions__warm.jpg') no-repeat center;
+}
+
+.ready-solutions__image--beauty {
+    background: url('/images/ready_solutions__beauty.jpg') no-repeat center;
+}
+
 .ready-solutions__image {
     width: 100%;
     height: 400px;
-    background: url('/images/ready_solutions__optimal.jpg') no-repeat center;
     background-size: cover;
 }
+
 
 .ready-solutions__carousel {
     .carousel__arrow {

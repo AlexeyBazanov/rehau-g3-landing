@@ -27,6 +27,24 @@
     }
 }
 
+@mixin fixed-top-navbar__items {
+    position: fixed;
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 3px 10px;
+    background: #03050aeb;
+    text-align: center;
+
+    animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+
+    .top-navbar__item {
+        float: none;
+    }
+}
+
 .top-navbar__burger {
     position: absolute;
     top: $mobile-offset;
@@ -48,7 +66,16 @@
 }
 
 .top-navbar__burger--fixed {
-    
+    position: fixed;
+    z-index: 99999;
+    background-color: #04060b21;
+    border-radius: 4px;
+
+    &~.top-navbar__items {
+        &.expanded {
+            @include fixed-top-navbar__items;
+        }
+    }
 }
 
 .top-navbar__items {
@@ -82,20 +109,8 @@
 }
 
 .top-navbar__items--fixed {
-    position: fixed;
-    display: block;
-    width: 100%;
-    left: 0;
-    top: 0;
-    padding: 3px 10px;
-    background: #03050aeb;
-    text-align: center;
-
-    animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-
-    .top-navbar__item {
-        float: none;
+    @include from($desktop) {
+        @include fixed-top-navbar__items;
     }
 }
 
