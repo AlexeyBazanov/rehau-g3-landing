@@ -64,7 +64,20 @@ const config = {
                     // Translates CSS into CommonJS
                     "css-loader",
                     // Support old browsers
-                    "postcss-loader",
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    require("autoprefixer")({
+                                        flexbox: "no-2009",
+                                    }),
+                                    require("cssnano")({ preset: "default", }),
+                                ],
+                            },
+                            sourceMap: true,
+                        },
+                    },
                     // Compiles Sass to CSS
                     "sass-loader",
                 ],

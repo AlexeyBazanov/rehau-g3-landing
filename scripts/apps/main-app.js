@@ -15,6 +15,8 @@ import ElementAnimator from "../components/element-animator.js";
 import {AnimateElement,} from "../components/element-animator.js";
 import ApplyButton from "../components/apply-button.js";
 import HeadlineCarousel from "../components/headline-carousel.js";
+import FeedbackForm from "../components/forms/feedback-form.js";
+import ApplyForm from "../components/forms/apply-form.js";
 
 
 const mainApp = new App();
@@ -78,13 +80,6 @@ mainApp.addComponent("configurator", new Configurator(
     ".slider--design")
 );
 
-mainApp.addComponent("passportCheckForm", new PassportCheckForm(
-    ".passport-check__form",
-    ".passport-check__input",
-    ".passport-check__destination",
-    "is-invisible"
-));
-
 mainApp.addComponent("pageLoader", new PageLoader(
     ".pageloader", 
     "is-active")
@@ -119,6 +114,17 @@ mainApp.addComponent("headlineCarousel", new HeadlineCarousel(
     12
 ));
 
+mainApp.addComponent("feedbackForm", new FeedbackForm(".feedback__form"));
+
+mainApp.addComponent("applyForm", new ApplyForm(".call-apply__form"));
+
+mainApp.addComponent("passportCheckForm", new PassportCheckForm(
+    ".passport-check__form",
+    ".passport-check__number",
+    ".passport-check__destination",
+    "is-invisible"
+));
+
 (function() {
     window.app = mainApp;
 })();
@@ -127,6 +133,3 @@ window.onload = function() {
     mainApp.start();
     global.app = mainApp;
 };
-
-
-

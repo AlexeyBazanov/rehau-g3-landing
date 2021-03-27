@@ -40,7 +40,7 @@
     right: 0;
     width: 50%;
     height: 750px;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: opacity 1s; 
 
     @include until($desktop) {
