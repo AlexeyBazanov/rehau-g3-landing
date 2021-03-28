@@ -70,7 +70,7 @@ export default class PassportCheckForm extends BaseForm {
 
     _setLinkValue() {
         this._passportLink.classList.remove(this._invisibleClass);
-        this._passportLink.setAttribute("href", "/rehau-g3-landing/passport.html?p=h13vfv39nh1v8zv42");
+        this._passportLink.setAttribute("href", "/passport.html?p=h13vfv39nh1v8zv42");
         //TOTO написать логику
     }
 

@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin, } = require("clean-webpack-plugin");
 
 const config = {
-    mode: "development",
     entry: {
         index: "./scripts/index.js",
         passport: "./scripts/passport.js",
@@ -11,6 +10,7 @@ const config = {
     output: {
         filename: "[name].[fullhash].js",
         path: path.resolve(__dirname, "dist"),
+        clean: true,
         // publicPath: "/rehau-g3-landing/",
     },
     plugins: [
@@ -30,13 +30,6 @@ const config = {
             inject: true,
         }),
     ],
-    devtool: "eval-cheap-module-source-map",
-    devServer: {
-        contentBase: "./dist",
-        overlay: true,
-        open: true,
-        compress: true,
-    },
     module: {
         rules: [
             {
@@ -64,20 +57,7 @@ const config = {
                     // Translates CSS into CommonJS
                     "css-loader",
                     // Support old browsers
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    require("autoprefixer")({
-                                        flexbox: "no-2009",
-                                    }),
-                                    require("cssnano")({ preset: "default", }),
-                                ],
-                            },
-                            sourceMap: true,
-                        },
-                    },
+                    "postcss-loader",
                     // Compiles Sass to CSS
                     "sass-loader",
                 ],
@@ -108,27 +88,6 @@ const config = {
                 ],
             },
         ],
-    },
-    optimization: {
-        runtimeChunk: "single",
-        splitChunks: {
-            chunks: "all",
-            maxInitialRequests: Infinity,
-            minSize: 0,
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name(module) {
-                        // get the name. E.g. node_modules/packageName/not/this/part.js
-                        // or node_modules/packageName
-                        const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-    
-                        // npm package names are URL-safe, but some servers don't like @ symbols
-                        return `npm.${packageName.replace("@", "")}`;
-                    },
-                },
-            },
-        },
     },
 };
 
