@@ -3,6 +3,7 @@ body {
     background: url('/images/template_background.jpg') no-repeat center;
     background-position: center center;
     background-size: cover;
+    // background-image: linear-gradient( 112.1deg, #020410 11.4%, #080e21 70.2% );
    
     @include font-helvetica-light();
 }

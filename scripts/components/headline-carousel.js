@@ -35,6 +35,7 @@ export default class HeadlineCarousel extends BaseComponent {
     getNextClass() {
         this._currentClassIndex += 1;
         if(this._currentClassIndex > this._bannerClasses.length - 1) {
+            this._bannerClasses = this._bannerClasses.reverse();
             this._currentClassIndex = 0;
         }
         return this.getCurrentClass();

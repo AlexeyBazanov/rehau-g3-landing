@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin, } = require("clean-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const config = {
     entry: {
@@ -10,7 +11,6 @@ const config = {
     output: {
         filename: "[name].[fullhash].js",
         path: path.resolve(__dirname, "dist"),
-        clean: true,
         // publicPath: "/rehau-g3-landing/",
     },
     plugins: [
@@ -29,6 +29,10 @@ const config = {
             chunks: ["passport",],
             inject: true,
         }),
+        new FaviconsWebpackPlugin({
+            logo: "./images/logo_passport_square.jpg",
+            prefix: "favicons/",
+        }), 
     ],
     module: {
         rules: [

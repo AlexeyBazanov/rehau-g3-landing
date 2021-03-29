@@ -4,7 +4,6 @@ import PropertyCircles from "../components/property-circles.js";
 import EnergyPanel from "../components/energy-panel.js";
 import PassportLoader from "../components/passport-loader.js";
 import PageLoader from "../components/page-loader.js";
-import PdfSaver from "../components/pdf-saver.js";
 
 const passportApp = new App();
 const passportApi = new PassportApi("https://window-pass.ru/api", "/passport", "/passport_check");
@@ -21,11 +20,6 @@ passportApp.addComponent("energyPanel", new EnergyPanel(
     ".energy-value", 
     "energy-value--shown", 
     1, 7, 3
-));
-
-passportApp.addComponent("pdfSaver", new PdfSaver(
-    "#passport-page",
-    ".passport__pdf-link"
 ));
 
 passportApp.addComponent("passportLoader", new PassportLoader(

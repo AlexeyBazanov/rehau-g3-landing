@@ -107,12 +107,12 @@ mainApp.addComponent("applyButton", new ApplyButton(
     "#call-apply__solution"
 ));
 
-mainApp.addComponent("headlineCarousel", new HeadlineCarousel(
-    ".headline__banner",
-    ["headline__banner--img1", "headline__banner--img2", "headline__banner--img3",],
-    "headline__banner--fade",
-    12
-));
+// mainApp.addComponent("headlineCarousel", new HeadlineCarousel(
+//     ".headline__banner",
+//     ["headline__banner--img1", "headline__banner--img2", "headline__banner--img3", "headline__banner--img4",],
+//     "headline__banner--fade",
+//     0.3
+// ));
 
 mainApp.addComponent("feedbackForm", new FeedbackForm(".feedback__form"));
 

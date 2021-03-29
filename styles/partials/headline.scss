@@ -34,35 +34,91 @@
     }
 }
 
-.headline__banner {
+.headline__banner--clip {
     position: absolute;
     top: 0;
     right: 0;
     width: 50%;
     height: 750px;
-    opacity: 0.8;
-    transition: opacity 1s; 
+    opacity: 1;
+    background: url("/images/banner_g3.png") no-repeat center;
+    transform-origin:center;
 
     @include until($desktop) {
         display: none;
     }
 }
 
+@keyframes clip1{
+    0%{clip-path: polygon(0% -50%, 50% -50%, -50% 50%, -100% 50% );}
+    100%{clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);}
+}
+@keyframes clipa{
+    0%{clip-path: polygon(-5% -55%, 55% -45%, -45% 55%, -95% 55% );}
+    100%{clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);}
+}
+@keyframes clip2{
+    0%{clip-path: polygon(50% -50%, 100% -50%, 200% 50%, 150% 50%);}
+    100%{clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);}
+}
+@keyframes clipb{
+    0%{clip-path: polygon(40% -60%, 100% -50%, 190% 40%, 150% 50%);}
+    100%{clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);}
+}
+@keyframes clip3{
+    0%{clip-path: polygon(-100% -150%, -50% -150%, -150% -50%, -200% -50%);}
+    100%{clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);}
+}
+@keyframes clip4{
+    0%{clip-path: polygon(150% -150%, 200% -150%, 300% -50%, 250% -50%);}
+    100%{clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);}
+}
+
+.headline__banner--clip-1 { 
+    animation:clip1 26s linear infinite; 
+}
+
+.headline__banner--clip-a {
+    transform: scale(1.1,1.1);
+    animation:clipa 46s linear infinite;  
+}
+.headline__banner--clip-2 {
+    transform: scale(1.12,1.12); 
+    animation:clip2 30s linear infinite;  
+}
+.headline__banner--clip-b {
+    transform: scale(1.14,1.14);
+    animation:clipb 26s linear infinite;  
+}
+.headline__banner--clip-3 {
+    transform: scale(1.15,1.15);
+    animation:clip3 38s linear infinite;  
+}
+.headline__banner--clip-4 {
+    transform: scale(1.13,1.13);
+    animation:clip4 34s linear infinite;  
+}
+
 .headline__banner--fade {
-    opacity: 0;
+    // opacity: 0;
 }
 
-.headline__banner--img1 {
-    background: url('/images/banner_g3_1.png') no-repeat top left;
-    background-size: contain;
-}
+// .headline__banner--img1 {
+//     background: url('/images/banner_g3_first.png') no-repeat top left;
+//     background-size: contain;
+// }
 
-.headline__banner--img2 {
-    background: url('/images/banner_g3_2.png') no-repeat top left;
-    background-size: contain;
-}
+// .headline__banner--img2 {
+//     background: url('/images/banner_g3_second.png') no-repeat top left;
+//     background-size: contain;
+// }
 
-.headline__banner--img3 {
-    background: url('/images/banner_g3_3.png') no-repeat top left;
-    background-size: contain;
-}
+// .headline__banner--img3 {
+//     background: url('/images/banner_g3_third.png') no-repeat top left;
+//     background-size: contain;
+// }
+
+// .headline__banner--img4 {
+//     background: url('/images/banner_g3_fourth.png') no-repeat top left;
+//     background-size: contain;
+// }
